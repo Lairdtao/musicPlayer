@@ -73,7 +73,7 @@
             font-size: 18px;
         }
         
-        .musicbox .info .auther {
+        .musicbox .info .author {
             font-size: 13px;
         }
         
@@ -148,7 +148,7 @@
                     </div>
                     <div class="info">
                         <div class="title">一吻天荒</div>
-                        <div class="auther">胡歌</div>
+                        <div class="author">胡歌</div>
                     </div>
                 </div>
 
@@ -172,7 +172,7 @@
             var playBtn = document.querySelector('.musicbox .play')
             var forwardBtn = document.querySelector('.musicbox .forward')
             var titleNode = document.querySelector('.musicbox .title')
-            var authorNode = document.querySelector('.musicbox .auther')
+            var authorNode = document.querySelector('.musicbox .author')
             var timeNode = document.querySelector('.musicbox .time')
             var progressBarNode = document.querySelector('.musicbox .progress .bar')
             var progressNowNode = document.querySelector('.musicbox .progress-now')
@@ -244,7 +244,7 @@
                 var container = document.createDocumentFragment()
                 musiclist.forEach(function(musicObj) {
                     var node = document.createElement('li')
-                    node.innerText = musicObj.auther + '-' + musicObj.title
+                    node.innerText = musicObj.author + '-' + musicObj.title
                     console.log(node)
                     container.appendChild(node)
                 })
@@ -254,7 +254,7 @@
             function loadMusic(songObj) {
                 music.src = songObj.src
                 titleNode.innerText = songObj.title
-                authorNode.innerText = songObj.auther
+                authorNode.innerText = songObj.author
                 cover.style.backgroundImage = 'url(' + songObj.img + ')'
                 for (var i = 0; i < musicListContainer.children.length; i++) {
                     musicListContainer.children[i].classList.remove('playing')
